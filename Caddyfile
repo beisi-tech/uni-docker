@@ -1,4 +1,8 @@
-:3000 {
+domain.com {
     root * /h5
-    file_server
+    encode gzip
+    handle /h5/* {
+        uri strip_prefix /h5
+        file_server
+    }
 }
