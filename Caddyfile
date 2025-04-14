@@ -1,4 +1,4 @@
-domain.com {
+yourdomain.com {
     root * /h5
     encode gzip
     handle /h5/* {
