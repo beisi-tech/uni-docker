@@ -9,7 +9,7 @@ services:
     volumes:
       - ./h5:/h5
     environment:
-      - CADDY_HOST=yourdomain.com
+      - CADDY_HOST=test.putianikun.cn
     restart: unless-stopped
     networks:
       - web-network

@@ -1,4 +1,4 @@
-yourdomain.com {
+test.putianikun.cn {
     root * /h5
     encode gzip
     handle /h5/* {
