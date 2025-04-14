@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./h5:/h5
+    environment:
+      - CADDY_HOST=domain.com
+    restart: unless-stopped
+    networks:
+      - web-network
+
+networks:
+  web-network:
+    driver: bridge
