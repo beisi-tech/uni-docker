@@ -7,9 +7,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./h5:/h5
+      - ./web:/web
     environment:
-      - CADDY_HOST=test.putianikun.cn
+      - CADDY_HOST=yourdomain.com
     restart: unless-stopped
     networks:
       - web-network

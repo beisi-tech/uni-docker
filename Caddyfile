@@ -1,8 +1,8 @@
-test.putianikun.cn {
-    root * /h5
+yourdomain.com {
+    root * /web
     encode gzip
-    handle /h5/* {
-        uri strip_prefix /h5
+    handle /path/* {
+        uri strip_prefix /web
         file_server
     }
 }
