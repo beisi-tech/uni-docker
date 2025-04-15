@@ -1,8 +1,8 @@
 yourdomain.com {
-    root * /h5
+    root * /web
     encode gzip
-    handle /h5/* {
-        uri strip_prefix /h5
+    handle /path/* {
+        uri strip_prefix /web
         file_server
     }
 }
