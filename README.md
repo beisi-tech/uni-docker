@@ -21,18 +21,21 @@
     5.  安装 git（请参考 VS Code 教程）
 3.  拉取远程仓库
     1. git 连接远程仓库
-       1. 在服务器生成 SSH 秘钥 `ssh-keygen -t ed25519 -C "your_email@example.com"`
+       1. 在服务器生成默认 SSH 秘钥
+          `ssh-keygen -t ed25519 -C "your_email@example.com"`
+          多个仓库需要使用自定义名称
+          `ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/id_ed25519_yourrepo`
           (直接按 3 次 Enter 使用默认设置)
-       2. 查看并复制公钥 `cat ~/.ssh/id_ed25519.pub`
+       3. 查看并复制公钥 `cat ~/.ssh/id_ed25519.pub`
           复制输出的全部内容
-       3. 在 GitHub 中添加 SSH 秘钥
+       4. 在 GitHub 中添加 SSH 秘钥
           1. 登录 GitHub
           2. 进入仓库，选择 Settings
           3. 点击 Deploy keys
           4. 点击 Add deploy key
           5. 输入 Title 和 Key
           6. 点击 Add key
-       4. 测试连接 `ssh -T git@github.com`
+       5. 测试连接 `ssh -T git@github.com`
           输入 yes 回车
           看到`Hi yourusername! You've successfully authenticated`表示成功
     2. git clone 远程仓库
