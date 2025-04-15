@@ -22,9 +22,9 @@
 3.  拉取远程仓库
     1. git 连接远程仓库
        1. 在服务器生成默认 SSH 秘钥  
-          `ssh-keygen -t ed25519 -C "your_email@example.com"`
+          `ssh-keygen -t ed25519 -C "your_email@example.com"`  
           多个仓库需要使用自定义名称  
-          `ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/id_ed25519_yourrepo`
+          `ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/id_ed25519_yourrepo`  
           (直接按 3 次 Enter 使用默认设置)
        3. 查看并复制公钥 `cat ~/.ssh/id_ed25519.pub`
           复制输出的全部内容
